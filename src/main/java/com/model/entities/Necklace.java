@@ -10,7 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Necklace {
+private static Necklace instance = new Necklace();
 
+    public static Necklace getInstance() {
+        return instance;
+    }
 
     protected List<Stone> necklace = new ArrayList<>();
 
@@ -18,14 +22,12 @@ public class Necklace {
         return necklace;
     }
 
-    public void setNecklace(ArrayList<Stone> necklace) {
-        this.necklace = necklace;
-    }
+
 
     public void addToNecklace(Stone stone) {
         if (stone.getCost() >= 100 && stone.getWeight() <= 20) {
             necklace.add(stone);
-            System.out.println(Text.ADD_TO_NECKLAKE + stone.getName());
+           System.out.println(Text.ADD_TO_NECKLAKE + stone.getName());
 
         }
     }
@@ -38,27 +40,32 @@ public class Necklace {
 
 
         Stone stone = mineral.createStone();
-        stone.newBuilder().setCost(120).setColor(Color.COLORLESS).setName(Name.DIAMOND).setWeight(12).setTransparency(0);
+        stone.newBuilder().setCost(120).setColor(Color.COLORLESS).setName(Name.DIAMOND).setWeight(16).setTransparency(0);
         addToNecklace(stone);
 
 
         Stone stone1 = organic.createStone();
-        stone.newBuilder().setCost(200).setColor(Color.GREEN).setName(Name.EMERALD).setWeight(10).setTransparency(10);
+        stone1.newBuilder().setCost(200).setColor(Color.GREEN).setName(Name.EMERALD).setWeight(10).setTransparency(10);
         addToNecklace(stone1);
 
         Stone stone2 = synthetic.createStone();
-        stone.newBuilder().setCost(150).setColor(Color.RED).setName(Name.PEARLS).setWeight(10).setTransparency(10);
+        stone2.newBuilder().setCost(150).setColor(Color.RED).setName(Name.PEARLS).setWeight(10).setTransparency(10);
         addToNecklace(stone2);
 
         Stone stone3 = mineral.createStone();
-        stone.newBuilder().setCost(140).setColor(Color.YELLOW).setName(Name.EMERALD).setWeight(15).setTransparency(20);
+        stone3.newBuilder().setCost(140).setColor(Color.YELLOW).setName(Name.EMERALD).setWeight(15).setTransparency(20);
         addToNecklace(stone3);
 
         Stone stone4 = organic.createStone();
-        stone.newBuilder().setCost(500).setColor(Color.BLACK).setName(Name.TOPAZ).setWeight(30).setTransparency(50);
+        stone4.newBuilder().setCost(500).setColor(Color.BLACK).setName(Name.TOPAZ).setWeight(30).setTransparency(50);
         addToNecklace(stone4);
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Necklace{" +
+                "necklace=" + necklace +
+                '}' ;
+    }
 }

@@ -1,5 +1,6 @@
 package com.model.entities;
 
+import com.model.constants.Constant;
 import com.model.service.FactoryCreate;
 import com.model.types.Color;
 import com.model.types.Name;
@@ -42,9 +43,9 @@ public abstract class Stone {
 
 
     public void setTransparency(int transparency) {
-
-        this.transparency = transparency;
-
+if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE) {
+    this.transparency = transparency;
+}
 
     }
 
@@ -68,7 +69,7 @@ public abstract class Stone {
                 ", cost=" + cost +
                 ", transparency=" + transparency +
                 ", weight=" + weight +
-                '}';
+                '}' + "\n";
     }
 
     public abstract void used();

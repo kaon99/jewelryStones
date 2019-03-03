@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Util {
-    public List<Stone> sortByCost(ArrayList<Stone> stones) {
+    public List<Stone> sortByCost(List<Stone> stones) {
         List<Stone> sortedStones = stones.stream()
                 .sorted(Comparator.comparing(Stone::getCost))
                 .collect(Collectors.toList());
@@ -17,7 +17,7 @@ public class Util {
         return sortedStones;
     }
 
-    public List<Stone> findStonesTransparencyInRange(int minRange, int maxRange, ArrayList<Stone> stones) {
+    public List<Stone> findStonesTransparencyInRange(int minRange, int maxRange, List<Stone> stones) {
         List<Stone> stonesInTransparencyRange = new ArrayList<>();
         for (Stone s : stones) {
             if (s.getTransparency() > minRange && s.getTransparency() < maxRange) {
@@ -27,7 +27,7 @@ public class Util {
         return stonesInTransparencyRange;
     }
 
-    public int sumOfCost(ArrayList<Stone> stones) {
+    public int sumOfCost(List<Stone> stones) {
         Integer sum = 0;
         for (Stone s : stones) {
             sum += s.getCost();
@@ -35,7 +35,7 @@ public class Util {
         return sum;
     }
 
-    public int sumOfWeight(ArrayList<Stone> stones) {
+    public int sumOfWeight(List<Stone> stones) {
         Integer sum = 0;
         for (Stone s : stones) {
             sum += s.getWeight();
