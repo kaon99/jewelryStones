@@ -1,13 +1,10 @@
 package com.model.service;
 
-import com.model.entities.Necklace;
-import com.model.entities.Stone;
-import com.model.types.Color;
-import com.model.types.Name;
+
 
 public class FactoryCreate {
 
-
+/** Pattern Fabric Method to create  new objects*/
 
     public static StoneFactory stoneFactory(String type) {
         if (type.equals("Минерал")) {

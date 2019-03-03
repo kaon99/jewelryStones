@@ -76,7 +76,10 @@ if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE)
 
     public abstract void used();
 
-
+/***
+ * Pattern Builder create to initialise stones in one string .
+ *
+ * */
     class Builder {
 
         private Builder() {

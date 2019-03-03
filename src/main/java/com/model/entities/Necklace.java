@@ -12,6 +12,11 @@ import java.util.List;
 public class Necklace {
 private static Necklace instance = new Necklace();
 
+/***
+ *
+ * Realise Pattern Singleton
+ *
+ * */
     public static Necklace getInstance() {
 
         return instance;
@@ -33,7 +38,10 @@ private static Necklace instance = new Necklace();
         }
     }
 
-
+/**
+ * Create some objects to add their in ArrayList
+ *
+ * */
     public void makeNecklace() {
         StoneFactory mineral = FactoryCreate.stoneFactory("Минерал");
         StoneFactory organic = FactoryCreate.stoneFactory("Органика");
@@ -50,7 +58,7 @@ private static Necklace instance = new Necklace();
         addToNecklace(stone1);
 
         Stone stone2 = synthetic.createStone();
-        stone2.newBuilder().setCost(150).setColor(Color.RED).setName(Name.PEARLS).setWeight(10).setTransparency(10);
+        stone2.newBuilder().setCost(150).setColor(Color.RED).setName(Name.RUBIN).setWeight(10).setTransparency(10);
         addToNecklace(stone2);
 
         Stone stone3 = mineral.createStone();
