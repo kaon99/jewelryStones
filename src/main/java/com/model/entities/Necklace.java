@@ -13,6 +13,7 @@ public class Necklace {
 private static Necklace instance = new Necklace();
 
     public static Necklace getInstance() {
+
         return instance;
     }
 

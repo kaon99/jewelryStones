@@ -72,6 +72,8 @@ if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE)
                 '}' + "\n";
     }
 
+
+
     public abstract void used();
 
 

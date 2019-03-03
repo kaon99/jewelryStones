@@ -15,10 +15,13 @@ public class ListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Necklace necklace  = Necklace.getInstance();
         Util util = new Util();
-        necklace.makeNecklace();
+        if ( necklace.getNecklace().isEmpty()){
+            necklace.makeNecklace();
+        }
+
 
       req.setAttribute("necklace",necklace.getNecklace());
-       req.setAttribute("findStonesTransparencyInRange",util.findStonesTransparencyInRange(10,15,necklace.getNecklace()));
+       req.setAttribute("findStonesTransparencyInRange",util.findStonesTransparencyInRange(0,100,necklace.getNecklace()));
         req.setAttribute("sortByCost", util.sortByCost(necklace.getNecklace()));
         req.setAttribute("sumOfCost",util.sumOfCost(necklace.getNecklace()));
         req.setAttribute("sumOfWeight",util.sumOfWeight(necklace.getNecklace()));
