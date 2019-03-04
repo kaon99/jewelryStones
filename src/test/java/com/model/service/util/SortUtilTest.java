@@ -32,7 +32,7 @@ public class SortUtilTest {
         necklace.makeNecklace();
         List<Stone> sortByCost = sortUtil.sortByCost(necklace.getNecklace());
         for (int i = 0; i < sortByCost.size() - 1; i++) {
-            if (sortByCost.get(i).getCost() > sortByCost.get(i + 1).getCost()) {
+            if (sortByCost.get(i).getCost() >= sortByCost.get(i + 1).getCost()) {
 
                 fail();
             }

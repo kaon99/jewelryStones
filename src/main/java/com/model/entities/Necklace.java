@@ -51,8 +51,6 @@ private static Necklace instance = new Necklace();
         Stone stone = mineral.createStone();
         stone.newBuilder().setCost(120).setColor(Color.COLORLESS).setName(Name.DIAMOND).setWeight(16).setTransparency(0);
         addToNecklace(stone);
-
-
         Stone stone1 = organic.createStone();
         stone1.newBuilder().setCost(200).setColor(Color.GREEN).setName(Name.EMERALD).setWeight(10).setTransparency(10);
         addToNecklace(stone1);
