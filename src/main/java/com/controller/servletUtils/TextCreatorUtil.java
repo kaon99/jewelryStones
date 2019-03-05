@@ -1,13 +1,17 @@
-package com.model.service.util;
+package com.controller.servletUtils;
 
+import com.model.constants.TextForLocale;
 import com.model.entities.Necklace;
 import com.model.entities.Stone;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class TextCreatorUtil {
 
-   public  static String printer (List stones){
+    public static String printer(List stones) {
         StringBuilder sb = new StringBuilder();
 
         if (stones != null && !stones.isEmpty()) {
@@ -18,9 +22,14 @@ public class TextCreatorUtil {
             }
             sb.append("</ui>");
 
-
         }
-
         return sb.toString();
+    }
+
+    public static String showMessages(Locale locale, String key) {
+        ResourceBundle bundle =
+                ResourceBundle.getBundle("messages", locale);
+        return bundle.getString(key);
+
     }
 }

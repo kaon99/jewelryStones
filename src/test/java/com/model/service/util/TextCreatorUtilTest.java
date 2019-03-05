@@ -1,5 +1,6 @@
 package com.model.service.util;
 
+import com.controller.servletUtils.TextCreatorUtil;
 import com.model.entities.Necklace;
 import org.junit.Test;
 
@@ -19,6 +20,6 @@ void initialiseneckLace (){
                 "</li><li>Stone{name=EMERALD, color=GREEN, cost=200, transparency=10, weight=10}\n" +
                 "</li><li>Stone{name=RUBIN, color=RED, cost=150, transparency=10, weight=10}\n" +
                 "</li><li>Stone{name=EMERALD, color=YELLOW, cost=140, transparency=20, weight=15}\n" +
-                "</li></ui>" ,TextCreatorUtil.printer(necklace.getNecklace()));
+                "</li></ui>" , TextCreatorUtil.printer(necklace.getNecklace()));
     }
 }

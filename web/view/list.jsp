@@ -21,12 +21,18 @@
         /**
          * This code use to print necklace and service result
          */
-        out.print( " Все камки в ожерелье " + request.getAttribute("necklace"));
-        out.print( " Камни в заданом дипазоне прозрачности " + request.getAttribute("findStonesTransparencyInRange"));
-        out.print(" Камни отсортированные по стоимости "+ request.getAttribute("sortByCost"));
-        out.println("Общая стоимость всех камней = " + request.getAttribute("sumOfCost"));
-        out.println("Общий вес всех камней " + request.getAttribute("sumOfWeight"));
+        out.print(request.getAttribute("necklacePrint"));
+        out.print(  request.getAttribute("necklace"));
+        out.print(request.getAttribute("rangePrint"));
+        out.print( request.getAttribute("findStonesTransparencyInRange"));
+        out.print(request.getAttribute("sortPrint"));
+        out.print( request.getAttribute("sortByCost"));
+        out.print(request.getAttribute("sumOfCostPrint"));
+        out.println( request.getAttribute("sumOfCost"));
+        out.print(request.getAttribute("sumOfWeightPrint"));
+        out.println(request.getAttribute("sumOfWeight"));
     %>
+
 
 
 </div>
