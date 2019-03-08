@@ -43,9 +43,8 @@ public abstract class Stone {
 
 
     public void setTransparency(int transparency) {
-if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE) {
-    this.transparency = transparency;
-}
+
+        this.transparency = transparency;
 
     }
 
@@ -57,7 +56,7 @@ if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE)
         this.weight = weight;
     }
 
-    public  Builder newBuilder (){
+    public Builder newBuilder() {
         return new Builder();
     }
 
@@ -73,16 +72,15 @@ if ( transparency > Constant.MIN_ViSIBLE && transparency < Constant.MAX_VISIBLE)
     }
 
 
-
     public abstract void used();
 
-/***
- * Pattern Builder create to initialise stones in one string .
- *
- * */
-    class Builder {
+    /***
+     * Pattern Builder create to initialise stones in one string .
+     *
+     * */
+   public class Builder {
 
-        private Builder() {
+        public Builder() {
         }
 
         public Builder setName(Name name) {

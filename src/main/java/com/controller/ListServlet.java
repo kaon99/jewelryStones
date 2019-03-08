@@ -3,6 +3,7 @@ package com.controller;
 import com.model.constants.Text;
 import com.model.entities.Necklace;
 import com.controller.servletUtils.TextCreatorUtil;
+import com.model.service.util.NecklaceUtil;
 import com.model.service.util.SortUtil;
 
 import javax.servlet.RequestDispatcher;
@@ -19,7 +20,7 @@ public class ListServlet extends HttpServlet {
         Necklace necklace = Necklace.getInstance();
         Locale locale = new Locale("uk", "UA");
         if (necklace.getNecklace().isEmpty()) {
-            necklace.makeNecklace();
+            NecklaceUtil.makeNecklace();
         }
         req.setAttribute("necklacePrint", TextCreatorUtil.showMessages(locale, "input.string.necklace"));
         req.setAttribute("necklace", TextCreatorUtil.printer(necklace.getNecklace()));

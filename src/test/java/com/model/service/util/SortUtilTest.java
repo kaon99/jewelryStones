@@ -29,7 +29,7 @@ public class SortUtilTest {
 
     @Test
     public void sortByCost() {
-        necklace.makeNecklace();
+        NecklaceUtil.makeNecklace();
         List<Stone> sortByCost = sortUtil.sortByCost(necklace.getNecklace());
         for (int i = 0; i < sortByCost.size() - 1; i++) {
             if (sortByCost.get(i).getCost() >= sortByCost.get(i + 1).getCost()) {
@@ -46,8 +46,8 @@ public class SortUtilTest {
         inizialise();
         stone1.setTransparency(10);
         stone2.setTransparency(30);
-        necklace.addToNecklace(stone1);
-        necklace.addToNecklace(stone2);
+        NecklaceUtil.addToNecklace(stone1);
+        NecklaceUtil.addToNecklace(stone2);
         int min = 0;
         int max = 30;
         for (Stone stone : sortUtil.findStonesTransparencyInRange(min,max,necklace.getNecklace())){
@@ -64,8 +64,8 @@ public class SortUtilTest {
     public void sumOfCost() {
         stone1.setCost(100);
         stone2.setCost(100);
-        necklace.addToNecklace(stone1);
-        necklace.addToNecklace(stone2);
+        NecklaceUtil.addToNecklace(stone1);
+        NecklaceUtil.addToNecklace(stone2);
 
         assertEquals(200, sortUtil.sumOfCost(necklace.getNecklace()));
     }
@@ -74,8 +74,8 @@ public class SortUtilTest {
     public void sumOfWeight() {
 
         inizialise();
-        necklace.addToNecklace(stone1);
-        necklace.addToNecklace(stone2);
+        NecklaceUtil.addToNecklace(stone1);
+        NecklaceUtil.addToNecklace(stone2);
         System.out.println(necklace.getNecklace());
         assertEquals(35, sortUtil.sumOfWeight(necklace.getNecklace()));
     }

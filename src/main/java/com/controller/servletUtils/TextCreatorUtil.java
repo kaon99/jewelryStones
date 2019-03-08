@@ -1,12 +1,7 @@
 package com.controller.servletUtils;
 
-import com.model.constants.TextForLocale;
-import com.model.entities.Necklace;
-import com.model.entities.Stone;
-
 import java.util.List;
 import java.util.Locale;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class TextCreatorUtil {

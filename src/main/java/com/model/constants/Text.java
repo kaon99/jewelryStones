@@ -7,4 +7,8 @@ public interface Text {
     String INDUSTRY  = "THIS STONE USED IN INDUSTRY ";
     String CREATOR = "CREATE BY : ";
     String ADD_TO_NECKLAKE = "STONE  IS SUCCESSFUL ADD TO NECKLALE";
+    String MINERAL = "минерал";
+    String ORGANIC ="Органика";
+    String SYNTHETIC ="Синтетика";
+    String FACTORY_NOT_SUPPORTED ="This Factory is not supported ";
 }
